@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="axios.min.js"></script>
+</head>
+<body>
+
+</body>
+<script>
+    axios.put("http://ec2-52-15-224-200.us-east-2.compute.amazonaws.com:8080/api/users/login", {
+        "email": "mrveitch@mailinator.com",
+        "password": "123456789",
+        "type": "account"
+    })
+        .then(function(res) {
+            console.log(res);
+            console.log(res.data);
+            console.log(res.data.token);
+            window.localStorage.setItem("mytoken", res.data.token);
+            debugger
+        })
+        .catch(function(err) {
+            console.log(err);
+        });
+</script>
+
+
+</html>

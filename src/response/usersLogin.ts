@@ -1,0 +1,31 @@
+export interface UserDTO {
+  id: number;
+  role: string;
+  perms: string[];
+  username: string;
+  fullName: string;
+  creationDate: string;
+  numSubscribing: number;
+  numFollowers: number;
+  numFollowing: number;
+  numPosts: number;
+  numViews: number;
+  bio?: any;
+  avatar: string;
+  latestFetchedPostId: number;
+  email: string;
+  occupation: string;
+  orcidId?: any;
+  profession: string;
+  displayedProfession: string;
+  personalWebsite?: any;
+  institutionId?: any;
+  institution?: any;
+  enabledNotifs: any[];
+  enabledOwnPostNotifs: any[];
+  token: string;
+  verifiedUser: boolean;
+  following: boolean;
+  userId: number;
+  registered: boolean;
+}

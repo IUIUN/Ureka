@@ -1,0 +1,115 @@
+@import '~antd/lib/style/themes/default.less';
+
+.userinfo-page{
+  background: #E7ECEF;
+  .header{
+    position: relative;
+    background: #fff;
+    .top-placement{
+      height: 80px;
+      background: #001427;
+      .logo{
+        position: relative;
+        height: 85px;
+        width: auto;
+        cursor: pointer;
+      }
+    }
+    .list-info{
+      max-width: 960px;
+      margin: 0 auto;
+      position: relative;
+      line-height: 40px;
+      .item-info{
+        float: left;
+        width: 25%;
+        text-align: center;
+      }
+      .image{
+        position: absolute;
+        width: 80px;
+        height: 80px;
+        border-radius: 40px;
+        left: 0;
+        top: -43px;
+      }
+    }
+  }
+  .main-container{
+    max-width: 1024px;
+    margin: 0 auto;
+    display: flex;
+    .main-left{
+      width: 300px;
+      padding-right: 15px;
+      .username{
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 20px;
+      }
+      .info{
+        color: #687784;
+      }
+      .edit-btn-container{
+        width: 50%;
+        float: left;
+      }
+      .edit-form{
+        .form-input{
+          margin-bottom: 10px
+        }
+      }
+    }
+    .main-center{
+      flex-grow: 1;
+      .message-container{
+        display: flex;
+        width: 520px;
+        background: #fff;
+        padding: 10px 16px;
+        margin-top: 10px;
+        .portrait{
+          width: 60px;
+          img{
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+            left: 0;
+          }
+        }
+        .info-container{
+          flex-grow: 1;
+          .author{
+            
+          }
+          .theme{
+            font-size: 14px;
+          }
+          .time{
+            font-size: 11px;
+            position: relative;
+            .tool-bar{
+              position: absolute;
+              text-align: right;
+              right: 0;
+              top: 0;
+              .bar-btn{
+                float: right;
+                margin-left: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .main-right{
+      width: 200px;
+      text-align: center;
+      .edit-btn{
+        margin-top: 20px;
+      }
+    }
+  }
+}
+
+

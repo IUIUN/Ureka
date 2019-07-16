@@ -1,0 +1,144 @@
+@import '~antd/lib/style/themes/default.less';
+
+.logo {
+  height: 50px;
+  //vertical-align: top;
+  margin-right: 16px;
+}
+.right{
+  float: right;
+}
+
+
+.export{
+  margin-right: 10px;
+}
+.umenu{
+  width: 256px;
+  background: white;
+}
+.headerMenu{
+  :global{
+    *>.ant-popover-inner-content{
+      padding: 0px;
+    }
+  }
+}
+.card{
+  margin-top: 10px;
+}
+
+.right {
+  float: right;
+  height: 100%;
+  overflow: hidden;
+  .action {
+    display: inline-block;
+    height: 100%;
+    padding: 0 12px;
+    cursor: pointer;
+    transition: all 0.3s;
+    > i {
+      color: @text-color;
+      vertical-align: middle;
+    }
+    &:hover {
+      //background: @pro-header-hover-bg;
+    }
+    &:global(.opened) {
+      //background: @pro-header-hover-bg;
+    }
+  }
+  .search {
+    padding: 0 12px;
+    &:hover {
+      background: transparent;
+    }
+  }
+  .account {
+    .avatar {
+      margin: ~'calc((@{layout-header-height} - 24px) / 2)' 0;
+      margin-right: 8px;
+      color: @primary-color;
+      vertical-align: top;
+      background: rgba(255, 255, 255, 0.85);
+    }
+  }
+}
+.icon{
+  //margin-right: 16px;
+  font-size: 24px;
+  //color: rgba(0, 0, 0, 0.2);
+  //margin-left: 16px;
+  vertical-align: middle;
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &:hover {
+    color: @primary-color;
+  }
+}
+.autoComplete{
+  *>.ant-menu-item-selected{
+    background-color: red;
+  }
+  //padding: 20px;
+  //margin-left: 10px;
+
+}
+.cardImage {
+
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.cardContent{
+  flex-direction: row;
+  display: flex;
+  .avatar{
+    width:50px;
+    height: 50px;
+  }
+  .name{
+    margin: 0;
+    font-size: small;
+    color: #999999;
+  }
+  .date{
+    .name();
+    font-size: smaller;
+
+  }
+
+  float: left;
+
+}
+.left{
+  float: right;
+  color: #3b9599;
+  .subtitle{
+    margin-left: 3px;
+  }
+  .lefticon{
+    font-size: 20px;
+    margin-right: 5px;
+  }
+  .text{
+
+    font-size: 20px;
+    margin-right: 5px;
+
+  }
+}
+.middleContent{
+  //white-space: nowrap;
+  //overflow: hidden;
+  //text-overflow:ellipsis;
+
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 9;
+  -webkit-box-orient: vertical;
+
+}

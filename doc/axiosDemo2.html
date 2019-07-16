@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="axios.min.js"></script>
+</head>
+<body>
+
+</body>
+<script>
+    var tokenStr = window.localStorage.getItem("mytoken");
+    axios.post("http://ec2-52-15-224-200.us-east-2.compute.amazonaws.com:8080/api/users/editprofile?userName=huangbiao&Position=Student&Institution=lol", {},{
+        headers: {
+            'Content-Type': 'application/json',
+            "Authorization": "Bearer "+tokenStr
+        }
+    })
+        .then(function(res) {
+            console.log(res);
+            debugger
+        })
+        .catch(function(err) {
+            console.log(err);
+        });
+</script>
+
+
+</html>

@@ -1,0 +1,44 @@
+{
+    "course": [
+        {
+            "id": 1000,
+            "course_name": "马连白米且",
+            "autor": "袁明",
+            "college": "金并即总变史",
+            "category_Id": 2
+        },
+        {
+            "id": 1001,
+            "course_name": "公拉农题队始果动",
+            "autor": "高丽",
+            "college": "先了队叫及便",
+            "category_Id": 2
+        }
+    ],
+    "getUserinfo": {
+        "username": "Yijun Liu",
+        "address": "USA. University of San Francisco",
+        "major": "Computer Scientis",
+        "email": "zhangsan@163.com",
+        "messageList": [
+            {
+                "id": 1,
+                "email": "Yijun Liu@163.com",
+                "message": "Just setting up my Twitter.111111",
+                "date": "2019-5-18 11:33:56"
+            },
+            {
+                "id": 2,
+                "email": "Yijun Liu@163.com",
+                "message": "Just setting up my Twitter.222222",
+                "date": "2019-5-18 11:33:56"
+            },
+            {
+                "id": 3,
+                "email": "Yijun Liu@163.com",
+                "message": "Just setting up my Twitter.333333",
+                "date": "2019-5-18 11:33:56"
+            }
+        ]
+    }
+}

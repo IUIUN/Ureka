@@ -1,0 +1,1760 @@
+{
+	"info": {
+		"_postman_id": "8678abe7-6220-46f8-87fb-44683832e53a",
+		"name": "ureka copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"daviesx66@gmail.com\",\n\t\"password\": \"DaviesX01\",\n\t\"name\": \"Davis\",\n\t\"occupation\": \"Chemist\"\n}"
+				},
+				"url": {
+					"raw": "{{ureka}}/api/users/create",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User login",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"daviesx66@gmail.com\",\n\t\"password\": \"DaviesX01\",\n\t\"gmtShift\": 12\n}"
+				},
+				"url": {
+					"raw": "localhost:8000/api/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiU0NJRU5USVNUIiwiZnVsbF9uYW1lIjoiU2hvdWJhbmVoIEhlbW1hdGkiLCJ1c2VyX2lkIjoxMDAxOCwidXNlcl9uYW1lIjoiU2hvdWJhbmVoSGVtbWF0aSIsImF1dGhfYXQiOjE1MzQ5MDY1MzN9.KApCABv1kOgJwqFLpaTsTF0RLHxkGB29N5F1NG9eVhA"
+					}
+				],
+				"url": {
+					"raw": "{{ureka}}/api/users?offset=0&limit=30",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "30"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User block",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVU5WRVJJRklFRCIsImZ1bGxfbmFtZSI6IkRhdmlzIFdlbiIsInVzZXJfaWQiOjEwMTUwLCJ1c2VyX25hbWUiOiJEYXZpc1dlbiIsImF1dGhfYXQiOjE1MzI4OTkzMDF9.hUnFQLWaYpVyK3C7iJzdRCZaf_u-a6SWkSRC__GOJig"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{ureka}}/api/users/1/block",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"1",
+						"block"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User unblock",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVU5WRVJJRklFRCIsImZ1bGxfbmFtZSI6IkRhdmlzIFdlbiIsInVzZXJfaWQiOjEwMTUwLCJ1c2VyX25hbWUiOiJEYXZpc1dlbiIsImF1dGhfYXQiOjE1MzI4OTkzMDF9.hUnFQLWaYpVyK3C7iJzdRCZaf_u-a6SWkSRC__GOJig"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{ureka}}/api/users/1/unblock",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"1",
+						"unblock"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User follow",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVU5WRVJJRklFRCIsImZ1bGxfbmFtZSI6IkRhdmlzIFdlbiIsInVzZXJfaWQiOjEwMTUwLCJ1c2VyX25hbWUiOiJEYXZpc1dlbiIsImF1dGhfYXQiOjE1MzI4OTkzMDF9.hUnFQLWaYpVyK3C7iJzdRCZaf_u-a6SWkSRC__GOJig"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{ureka}}/api/channel/1/follow",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"channel",
+						"1",
+						"follow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User unfollow",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVU5WRVJJRklFRCIsImZ1bGxfbmFtZSI6IkRhdmlzIFdlbiIsInVzZXJfaWQiOjEwMTUwLCJ1c2VyX25hbWUiOiJEYXZpc1dlbiIsImF1dGhfYXQiOjE1MzI4OTkzMDF9.hUnFQLWaYpVyK3C7iJzdRCZaf_u-a6SWkSRC__GOJig"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{ureka}}/api/channel/1/unfollow",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"channel",
+						"1",
+						"unfollow"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User avatar create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/users/me/makeAvatar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"me",
+						"makeAvatar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User profession",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVU5WRVJJRklFRCIsImZ1bGxfbmFtZSI6IkRhdmlzIFdlbiIsInVzZXJfaWQiOjEwMTUwLCJ1c2VyX25hbWUiOiJEYXZpc1dlbiIsImF1dGhfYXQiOjE1MzM1MjA3NTJ9.YF8_YZ3czcYM7A-O3dB3E6Tc6lpFU7TGiIssqhrTb4o"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{ureka}}/api/users/profession/list",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"profession",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVU5WRVJJRklFRCIsImZ1bGxfbmFtZSI6IkRhdmlzIFdlbiIsInVzZXJfaWQiOjEwMTUwLCJ1c2VyX25hbWUiOiJEYXZpc1dlbiIsImF1dGhfYXQiOjE1MzIyOTg2MDR9.lPsDc5Ch_50Zrg-Auz6VQ81bAkLNPrCDDsDdxL5a9ZQ"
+					}
+				],
+				"url": {
+					"raw": "{{ureka}}/api/post?offset=0&limit=10&userIds=10150&statuses=Draft&subscribedOnly=false",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"post"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "userIds",
+							"value": "10150"
+						},
+						{
+							"key": "statuses",
+							"value": "Draft"
+						},
+						{
+							"key": "subscribedOnly",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJmdWxsX25hbWUiOiJEYXZpcyBXZW4iLCJ1c2VyX2lkIjoxMDE1MCwidXNlcl9uYW1lIjoiRGF2aXNXZW4iLCJhdXRoX2F0IjoxNTM4MjQ0NDI4fQ.nlrysFr2iE_UZaJd00-pgXRT_8r7Wb1rD_PaEAQEEI8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelId\": 142,\n\t\"title\": \"test title 12\",\n\t\"link\": \"https://www.google.com\",\n\t\"text\": \"test post4.\",\n\t\"mediaInfo\": [\n\t\t{\n\t\t\t\"mediaType\": \"Image\",\n\t\t\t\"mediaFormat\": \"JPEG\"\n\t\t},\n\t\t{\n\t\t\t\"mediaType\": \"Image\",\n\t\t\t\"mediaFormat\": \"PNG\"\n\t\t}\n\t],\n\t\"tags\": [\n\t\t\"A\", \"B\", \"C\"\n\t],\n\t\"status\": \"Draft\"\n}"
+				},
+				"url": {
+					"raw": "{{ureka}}/api/post/create",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"post",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post read",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVU5WRVJJRklFRCIsImZ1bGxfbmFtZSI6IkRhdmlzIFdlbiIsInVzZXJfaWQiOjEwMTUwLCJ1c2VyX25hbWUiOiJEYXZpc1dlbiIsImF1dGhfYXQiOjE1MzI4OTkzMDF9.hUnFQLWaYpVyK3C7iJzdRCZaf_u-a6SWkSRC__GOJig"
+					}
+				],
+				"url": {
+					"raw": "{{ureka}}/api/post/1000",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"post",
+						"1000"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJmdWxsX25hbWUiOiJEYXZpcyIsInVzZXJfaWQiOjEwMDE0LCJ1c2VyX25hbWUiOiJEYXZpcyIsImF1dGhfYXQiOjE1MzEwODQxMTJ9.4VqCycGFTCdI8ABc9YmvmV2bwyMBAGrp3FoL3bmJ9N4"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Test title 3\",\n\t\"text\": \"Updated description.\",\n\t\"tags\": [\"B\", \"D\"]\n}"
+				},
+				"url": {
+					"raw": "{{ureka}}/api/post/2/update",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"post",
+						"2",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post media upload",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "media",
+							"type": "file",
+							"src": "logo.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "localhost:8080/api/post/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJQIjoxMDAxNDgsIlQiOjAsIlUiOjg1LCJGIjoxfQ.gYFgooQ6BVpunCPO4KVLnvfaOOP6R5JoNHz9WOZeiog/uploadMedia",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"post",
+						"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJQIjoxMDAxNDgsIlQiOjAsIlUiOjg1LCJGIjoxfQ.gYFgooQ6BVpunCPO4KVLnvfaOOP6R5JoNHz9WOZeiog",
+						"uploadMedia"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post media download",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/post/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJQIjoxMDAxMDksIlQiOjAsIlUiOjEsIkYiOjF9.P_Hok9XCCSucmMfgi1sSObr7j2ClCuSS_C7Gf4uKmQc/downloadMedia?mediaFidelity=Small",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"post",
+						"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJQIjoxMDAxMDksIlQiOjAsIlUiOjEsIkYiOjF9.P_Hok9XCCSucmMfgi1sSObr7j2ClCuSS_C7Gf4uKmQc",
+						"downloadMedia"
+					],
+					"query": [
+						{
+							"key": "mediaFidelity",
+							"value": "Small"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post share",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelId\": 0,\n\t\"text\": \"test share post2.\",\n\t\"mediaInfo\": [\n\t\t{\n\t\t\t\"mediaType\": \"Image\",\n\t\t\t\"mediaFormat\": \"JPEG\"\n\t\t}\n\t],\n\t\"tags\": [\n\t\t\"E\", \"F\", \"G\"\n\t]\n}"
+				},
+				"url": {
+					"raw": "{{ureka}}/api/post/2/share",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"post",
+						"2",
+						"share"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post like",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiR1VFU1QiLCJ1c2VyX2lkIjoxLCJ1c2VyX25hbWUiOiJMdWFuIiwiYXV0aF9hdCI6MTUyMjgxNjQ0OH0.2EHJgk9lXw71JLe9UWT4kSp9bTTgIJdzMULx0KYLbyg"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/post/1/like",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"post",
+						"1",
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post unlike",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/post/1/unlike",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"post",
+						"1",
+						"unlike"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post bookmark",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVU5WRVJJRklFRCIsImZ1bGxfbmFtZSI6Ikx1YW4iLCJ1c2VyX2lkIjoxMDIzOCwidXNlcl9uYW1lIjoiTHVhbiIsImF1dGhfYXQiOjE1MzAzOTAyMzh9.mgxNOF-u8a0vZiVDSXi-aSpbz3j7VWpU_xo1wB9N2qA"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/post/838/bookmark",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"post",
+						"838",
+						"bookmark"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post bookmark discard",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVU5WRVJJRklFRCIsImZ1bGxfbmFtZSI6Ikx1YW4iLCJ1c2VyX2lkIjoxMDIzOCwidXNlcl9uYW1lIjoiTHVhbiIsImF1dGhfYXQiOjE1MzAzOTAyMzh9.mgxNOF-u8a0vZiVDSXi-aSpbz3j7VWpU_xo1wB9N2qA"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/post/838/discard",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"post",
+						"838",
+						"discard"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comment create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiR1VFU1QiLCJ1c2VyX2lkIjoxLCJ1c2VyX25hbWUiOiJMdWFuIiwiYXV0aF9hdCI6MTUyMjgxNjQ0OH0.2EHJgk9lXw71JLe9UWT4kSp9bTTgIJdzMULx0KYLbyg"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"text\": \"good, @ShuaiZheng1\"\n}"
+				},
+				"url": {
+					"raw": "localhost:8080/api/post/3223/comment",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"post",
+						"3223",
+						"comment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comment update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJmdWxsX25hbWUiOiJEYXZpcyBXZW4iLCJ1c2VyX2lkIjoxMDE1MCwidXNlcl9uYW1lIjoiRGF2aXNXZW4iLCJhdXRoX2F0IjoxNTQwMzQ2MDEzfQ.uFimWZ0lwK680Ad1PsbsKUDf3EMmp7A3bOOzOTeaZ_k"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"text\": \"test update.\"\n}"
+				},
+				"url": {
+					"raw": "{{ureka}}/api/post/comment/159/update",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"post",
+						"comment",
+						"159",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comment list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiR1VFU1QiLCJ1c2VyX2lkIjoxLCJ1c2VyX25hbWUiOiJMdWFuIiwiYXV0aF9hdCI6MTUyMjgxNjQ0OH0.2EHJgk9lXw71JLe9UWT4kSp9bTTgIJdzMULx0KYLbyg"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/post/1/comment?offset=0&limit=5",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"post",
+						"1",
+						"comment"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Channel group tree",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVU5WRVJJRklFRCIsImZ1bGxfbmFtZSI6IkRhdmlzIFdlbiIsInVzZXJfaWQiOjEwMDI3LCJ1c2VyX25hbWUiOiJEYXZpc1dlbiIsImF1dGhfYXQiOjE1MzEyNzY2OTJ9.3WqaOdUDzDqsHET9AQ487AL2VPuDrZKQKssJ5kBMipM"
+					}
+				],
+				"url": {
+					"raw": "{{ureka}}/api/channel/groupTree?subscribedOnly=false",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"channel",
+						"groupTree"
+					],
+					"query": [
+						{
+							"key": "subscribedOnly",
+							"value": "false"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Channel list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiR1VFU1QiLCJmdWxsX25hbWUiOiJMdWFuIiwidXNlcl9pZCI6MTAwMTMsInVzZXJfbmFtZSI6Ikx1YW4iLCJhdXRoX2F0IjoxNTMwOTkwNDk2fQ.-kPS5YRqrvIBtlhO1X12MO3LHmPo7fnPgwVlX6g2hkY"
+					}
+				],
+				"url": {
+					"raw": "{{ureka}}/api/channel/under/6",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"channel",
+						"under",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Channel list ii",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJmdWxsX25hbWUiOiJEYXZpcyIsInVzZXJfaWQiOjEwMDEzLCJ1c2VyX25hbWUiOiJEYXZpcyIsImF1dGhfYXQiOjE1NDY2NjE1Njl9.w7Vcb5g6LK-2loasx_jtSNAg5PzB8xX0dcDuOABzDUI"
+					}
+				],
+				"url": {
+					"raw": "{{ureka}}/api/channel?subscribedOnly=false&ownerIds=10239",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"channel"
+					],
+					"query": [
+						{
+							"key": "subscribedOnly",
+							"value": "false"
+						},
+						{
+							"key": "ownerIds",
+							"value": "10239"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Channel read",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJmdWxsX25hbWUiOiJEYXZpcyIsInVzZXJfaWQiOjEwMDEzLCJ1c2VyX25hbWUiOiJEYXZpcyIsImF1dGhfYXQiOjE1NDY2NjE1Njl9.w7Vcb5g6LK-2loasx_jtSNAg5PzB8xX0dcDuOABzDUI"
+					}
+				],
+				"url": {
+					"raw": "{{ureka}}/api/channel/1",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"channel",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Channel subscription",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiR1VFU1QiLCJmdWxsX25hbWUiOiJMdWFuIiwidXNlcl9pZCI6MTAwMTMsInVzZXJfbmFtZSI6Ikx1YW4iLCJhdXRoX2F0IjoxNTI2MTY0NDgwfQ.KWR5neSXBZUhkYF3PG2d8V4If6eQfRF4RGAzX1Y9q4g"
+					}
+				],
+				"url": {
+					"raw": "{{ureka}}/api/channel/142/subscribe",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"channel",
+						"142",
+						"subscribe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Channel unsubscription",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiR1VFU1QiLCJmdWxsX25hbWUiOiJMdWFuIiwidXNlcl9pZCI6MTAwMTMsInVzZXJfbmFtZSI6Ikx1YW4iLCJhdXRoX2F0IjoxNTI2MTY0NDgwfQ.KWR5neSXBZUhkYF3PG2d8V4If6eQfRF4RGAzX1Y9q4g"
+					}
+				],
+				"url": {
+					"raw": "{{ureka}}/api/channel/142/unsubscribe",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"channel",
+						"142",
+						"unsubscribe"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Channel group subscription",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiR1VFU1QiLCJ1c2VyX2lkIjoxLCJ1c2VyX25hbWUiOiJMdWFuIiwiYXV0aF9hdCI6MTUyMjgxNjQ0OH0.2EHJgk9lXw71JLe9UWT4kSp9bTTgIJdzMULx0KYLbyg"
+					}
+				],
+				"url": {
+					"raw": "{{ureka}}/api/channel/247/subscribeGroup",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"channel",
+						"247",
+						"subscribeGroup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Channel group unsubscription",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{ureka}}/api/channel/247/unsubscribeGroup",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"channel",
+						"247",
+						"unsubscribeGroup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Notification list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJmdWxsX25hbWUiOiJEYXZpcyBXZW4iLCJ1c2VyX2lkIjoxMDE1MCwidXNlcl9uYW1lIjoiRGF2aXNXZW4iLCJhdXRoX2F0IjoxNTM2MTY5ODA2fQ.pMvqff6Xq90Fxx2K3iHKU5i715Dh69Nx-5tNY9zQioY"
+					}
+				],
+				"url": {
+					"raw": "{{ureka}}/api/notification?offset=0&limit=5",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"notification"
+					],
+					"query": [
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Notification device push",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"requests\": [\n\t\t{\n\t\t\t\"googleTokens\": [\"dAUVobGgGlw:APA91bEd0rG0E7ihZcjorzp0jx0nWjDsfpiVd7zAf3Ox0fOmYjTzoTk1B7GwRarJZDlOza6u7qnQT5__VBfdbijoGj_kJGnm3cc1QCqdQ7jAo00etvtD7eVpZSzCIKMpEZxJ1J9W7hxx\"],\n\t\t\t\"appleTokens\": [\"24b459880da7a91105296f9296fc9d586ca5077a8519c41924d13891fee6ca25\"],\n\t\t\t\"message\": \"Test notification.\"\n\t\t}\n\t\t]\n}"
+				},
+				"url": {
+					"raw": "{{ureka}}/api/notification/devicePush",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"notification",
+						"devicePush"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Notification unread count",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJmdWxsX25hbWUiOiJEYXZpcyBXZW4iLCJ1c2VyX2lkIjoxMDE1MCwidXNlcl9uYW1lIjoiRGF2aXNXZW4iLCJhdXRoX2F0IjoxNTM1NTExNzk0fQ.7XfArN0H5CiaOG9AXJdDUn5aF0TTYKbdeqA2wblDvi4\n"
+					}
+				],
+				"url": {
+					"raw": "{{ureka}}/api/notification/unreadCount",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"notification",
+						"unreadCount"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Notification mark as read",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"markAll\": true,\n\t\"notifIds\": [1]\n}"
+				},
+				"url": {
+					"raw": "{{ureka}}/api/notification/markAsRead",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"notification",
+						"markAsRead"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Push subscribe",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVU5WRVJJRklFRCIsImZ1bGxfbmFtZSI6IkRhdmlzIFdlbiIsInVzZXJfaWQiOjEwMDI3LCJ1c2VyX25hbWUiOiJEYXZpc1dlbiIsImF1dGhfYXQiOjE1NTk1MjQ2OTl9.5qesQBwsMyInWgcP9-t1j7HSCXSurm4eCfdudc7ddXw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "ec2-18-216-37-132.us-east-2.compute.amazonaws.com:7000/subscribe?",
+					"host": [
+						"ec2-18-216-37-132",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "7000",
+					"path": [
+						"subscribe"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:8000/work",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "ec2-18-216-37-132.us-east-2.compute.amazonaws.com:7000/work/",
+					"host": [
+						"ec2-18-216-37-132",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "7000",
+					"path": [
+						"work",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User read by name",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVU5WRVJJRklFRCIsImZ1bGxfbmFtZSI6Ikx1YW4iLCJ1c2VyX2lkIjoxMDIzOCwidXNlcl9uYW1lIjoiTHVhbiIsImF1dGhfYXQiOjE1MzAzOTcxOTN9.iGeZ5fwXH2qI8RRdW-_s6Sv0gEjr5kOe3dXFNFT84mY"
+					}
+				],
+				"url": {
+					"raw": "localhost:8080/api/users/root/read",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"users",
+						"root",
+						"read"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Channel create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJmdWxsX25hbWUiOiJEYXZpcyBXZW4iLCJ1c2VyX2lkIjoxMDE1MCwidXNlcl9uYW1lIjoiRGF2aXNXZW4iLCJhdXRoX2F0IjoxNTMzNTc4MjY5fQ.fTvNcdGvebyD7xqLmPK807S4GoERLxlraByEdmXtL5U"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Test channel2\",\n\t\"channelInfo\": \"Test chanel description2\",\n\t\"channelGroupId\": 247,\n\t\"underground\": false\n}"
+				},
+				"url": {
+					"raw": "{{ureka}}/api/channel/create",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"channel",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Push work",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "ec2-18-219-55-78.us-east-2.compute.amazonaws.com:7000/work/",
+					"host": [
+						"ec2-18-219-55-78",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "7000",
+					"path": [
+						"work",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Push work prod",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "ec2-18-219-55-78.us-east-2.compute.amazonaws.com:8000/work/",
+					"host": [
+						"ec2-18-219-55-78",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8000",
+					"path": [
+						"work",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GCM notification",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "key=AIzaSyDegmT0rimGFUUUobY0_YGCso3p2vMW3KE"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"notification\": {\"title\": \"Test. if shows up, tell Davis.\"},\n\t\"to\": \"eoD3c3gPmQ0:APA91bH48LNBUyMeUT2G_dbsMnOWnszjMH-8kfrTCsDcogKKCbfCW3b6TM_MHchrd3Ma1UndiY_wvNYYvhIk7qVHtSiBThSBsovhkE2HYz8Wp1g0dDieObZ3_AAulXb6laATraAoLReFtv21mvsfUbXkD9nlzzTKAA\"\n}"
+				},
+				"url": {
+					"raw": "https://android.googleapis.com/gcm/send",
+					"protocol": "https",
+					"host": [
+						"android",
+						"googleapis",
+						"com"
+					],
+					"path": [
+						"gcm",
+						"send"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Comment like",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiVU5WRVJJRklFRCIsImZ1bGxfbmFtZSI6IkRhdmlzIFdlbiIsInVzZXJfaWQiOjEwMTUwLCJ1c2VyX25hbWUiOiJEYXZpc1dlbiIsImF1dGhfYXQiOjE1MzE4NTg5Nzl9.XE23PMC5rFio1cqRoOyh4fdVF3WPusFT4lIHedT3jHY"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{ureka}}/api/post/comment/146/like",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"post",
+						"comment",
+						"146",
+						"like"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Institution list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJmdWxsX25hbWUiOiJEYXZpcyBXZW4iLCJ1c2VyX2lkIjoxMDE1MCwidXNlcl9uYW1lIjoiRGF2aXNXZW4iLCJhdXRoX2F0IjoxNTM0ODk1NzcwfQ.9kcIiuO8cjYBfJwZsudxtJRaytoxmpFF4ryDMw9lxXg"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{ureka}}/api/institution?fulltext=University&offset=0&limit=5",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"institution"
+					],
+					"query": [
+						{
+							"key": "fulltext",
+							"value": "University"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "limit",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User enabled notifications",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJmdWxsX25hbWUiOiJEYXZpcyBXZW4iLCJ1c2VyX2lkIjoxMDE1MCwidXNlcl9uYW1lIjoiRGF2aXNXZW4iLCJhdXRoX2F0IjoxNTM5MTM5NzUzfQ.0KkQZbjJ5aRSuATu1IAgH7clXXoHC_r3Iz9qhhEO_H0"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"enabledNotifs\": [\"PostBookmark\"]\n}"
+				},
+				"url": {
+					"raw": "{{ureka}}/api/users/enableNotifs",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"enableNotifs"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Channel invitation create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiR1VFU1QiLCJmdWxsX25hbWUiOiJEYXZpcyIsInVzZXJfaWQiOjEwMDEzLCJ1c2VyX25hbWUiOiJEYXZpcyIsImF1dGhfYXQiOjE1NDY0MzIwNTN9.7avta_I17VTc61qtBPU-jdbJuNcFYU4hZnFxucNEvnY"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"channelId\": -1,\n\t\"inviteeId\": 1\n}"
+				},
+				"url": {
+					"raw": "{{ureka}}/api/channel/invitation/create",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"channel",
+						"invitation",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Channel invitation list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiR1VFU1QiLCJmdWxsX25hbWUiOiJEYXZpcyIsInVzZXJfaWQiOjEwMDEzLCJ1c2VyX25hbWUiOiJEYXZpcyIsImF1dGhfYXQiOjE1NDY0MzIwNTN9.7avta_I17VTc61qtBPU-jdbJuNcFYU4hZnFxucNEvnY"
+					}
+				],
+				"url": {
+					"raw": "{{ureka}}/api/channel/invitation",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"channel",
+						"invitation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bookmarkfolder create",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"folderName\": \"firstfolder\"\n}"
+				},
+				"url": {
+					"raw": "{{ureka}}/api/bookmarkfolder/createfolder",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"bookmarkfolder",
+						"createfolder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bookmarkfolder getlist",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{ureka}}/api/bookmarkfolder/getfolderlist",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"bookmarkfolder",
+						"getfolderlist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bookmarkfolder puttoFolder",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"folderId\":\"exampleId\",\n\t\"postId\":\"exampleId\"\n}"
+				},
+				"url": {
+					"raw": "{{ureka}}/api/bookmarkfolder/puttofolder",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"bookmarkfolder",
+						"puttofolder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Bookmarkfolder getPost",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": []
+				},
+				"url": {
+					"raw": "{{ureka}}/api/bookmarkfolder/{folderId}/getpostfromfolder",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"bookmarkfolder",
+						"{folderId}",
+						"getpostfromfolder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookMarkFolder Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJmdWxsX25hbWUiOiJ0ZXN0IiwidXNlcl9pZCI6MTAwMTMsInVzZXJfbmFtZSI6InRlc3QiLCJhdXRoX2F0IjoxNTU2MDg0NDkwfQ.RHcv7jNaLWfyeQKNJ6H50lEvwoPttJ6RI03OjxEFA6M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"folderId\": \"2\"\n}"
+				},
+				"url": {
+					"raw": "{{ureka}}/api/bookmarkfolder/deletefolder",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"bookmarkfolder",
+						"deletefolder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookmarkFolder Delete post in folder",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJmdWxsX25hbWUiOiJ0ZXN0IiwidXNlcl9pZCI6MTAwMTMsInVzZXJfbmFtZSI6InRlc3QiLCJhdXRoX2F0IjoxNTU2MDg0NDkwfQ.RHcv7jNaLWfyeQKNJ6H50lEvwoPttJ6RI03OjxEFA6M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"postId\":\"1\",\n    \"folderId\":\"2\"\n}"
+				},
+				"url": {
+					"raw": "{{ureka}}/api/bookmarkfolder/deletepostinfolder",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"bookmarkfolder",
+						"deletepostinfolder"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{ureka}}/channel/517/update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\"       : \"xxx\",\n\t\"channelInfo\" : \"www.google.com\",\n\t\"underground\" : \"xxxx\",\n\t\"visible\"     : \"xxxx\",\n\t\"website\"     : \"www.google.com\"\n}"
+				},
+				"url": {
+					"raw": "{{ureka}}/channel/517/update",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"channel",
+						"517",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "channel makeAvatar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJmdWxsX25hbWUiOiJEYXZpcyBXZW4iLCJ1c2VyX2lkIjoxMDE1MCwidXNlcl9uYW1lIjoiRGF2aXNXZW4iLCJhdXRoX2F0IjoxNTYxNjA5NDQ2fQ.u6xu_lwp8JrFMDYSP5FHBgSBs9P4q4CI8zgpKss8jsE",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{ureka}}/api/channel/channel/553/makeAvatar",
+					"host": [
+						"{{ureka}}"
+					],
+					"path": [
+						"api",
+						"channel",
+						"channel",
+						"553",
+						"makeAvatar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user edit profile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJyb2xlIjoiQURNSU4iLCJmdWxsX25hbWUiOiJEYXZpcyBXZW4iLCJ1c2VyX2lkIjoxMDE1MCwidXNlcl9uYW1lIjoiRGF2aXNXZW4iLCJhdXRoX2F0IjoxNTYyOTQ0NTc3fQ.rxxqCLw9f57F8iBl0kpHlsH_8xFUa66970oGSopHe3M",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8000/api/users/editprofile?userName=test&Position=KingofBack&Institution=lol",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"users",
+						"editprofile"
+					],
+					"query": [
+						{
+							"key": "userName",
+							"value": "test"
+						},
+						{
+							"key": "Position",
+							"value": "KingofBack"
+						},
+						{
+							"key": "Institution",
+							"value": "lol"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
